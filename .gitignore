@@ -1,0 +1,15 @@
+.DS_Store
+inputs/
+build/
+reports/
+secrets/
+.venv/
+__pycache__/
+*.pyc
+*.MOV
+*.mov
+*.M4A
+*.m4a
+*.wav
+*.WAV
+*.tmp

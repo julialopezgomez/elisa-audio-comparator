@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; media-src 'self' blob:; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'">
+  <title>Comparar tomas de flauta</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="intro">
+      <p class="eyebrow">Escucha privada</p>
+      <h1>Comparar tomas de flauta</h1>
+      <p>Cambia entre <strong>Original</strong> y <strong>Mejorado</strong> mientras suena. La música seguirá en el mismo punto.</p>
+      <label class="volume-toggle">
+        <input id="volume-match" type="checkbox" checked>
+        <span><strong>Igualar volumen para comparar</strong><small>Atenúa la versión más fuerte. No modifica los audios.</small></span>
+      </label>
+    </header>
+
+    <section id="key-message" class="key-message" hidden aria-live="polite">
+      <h2>No se puede abrir el audio</h2>
+      <p id="key-message-text"></p>
+    </section>
+
+    <section id="players" class="players" aria-label="Tomas" hidden>
+      <article class="player-card" data-take="5016">
+        <div class="card-heading">
+          <div><p class="take-label">Primera toma</p><h2>IMG_5016</h2></div>
+          <span class="status-pill" data-role="status">Preparando…</span>
+        </div>
+        <fieldset class="ab-switch" aria-label="Versión de la toma 5016">
+          <legend class="sr-only">Versión</legend>
+          <button type="button" data-version="original" aria-pressed="true">Original</button>
+          <button type="button" data-version="mejorado" aria-pressed="false">Mejorado</button>
+        </fieldset>
+        <div class="transport">
+          <button type="button" class="skip" data-action="back" aria-label="Retroceder 5 segundos">−5<span>s</span></button>
+          <button type="button" class="play" data-action="play" aria-label="Reproducir"><span aria-hidden="true">▶</span></button>
+          <button type="button" class="skip" data-action="forward" aria-label="Avanzar 5 segundos">+5<span>s</span></button>
+        </div>
+        <div class="time-row"><output data-role="current">00:00</output><span>de</span><output data-role="duration">--:--</output></div>
+        <div class="timeline-wrap">
+          <canvas data-role="waveform" height="96" aria-hidden="true"></canvas>
+          <div class="ghost" data-role="ghost" hidden><span class="sr-only">Posición equivalente aproximada</span></div>
+          <input data-role="timeline" type="range" min="0" max="1" value="0" step="0.01" aria-label="Posición en la toma 5016">
+        </div>
+        <div class="markers" data-role="markers" aria-label="Puntos musicales"></div>
+        <div class="equivalent" data-role="equivalent">
+          <p data-role="equivalent-text">La correspondencia aparecerá al elegir un punto.</p>
+          <button type="button" data-action="switch-take" disabled>Escuchar este pasaje en la otra toma</button>
+        </div>
+        <div class="load-progress" data-role="load"><span></span><small>Descifrando en este dispositivo…</small></div>
+      </article>
+
+      <article class="player-card" data-take="5017">
+        <div class="card-heading">
+          <div><p class="take-label">Segunda toma</p><h2>IMG_5017</h2></div>
+          <span class="status-pill" data-role="status">Se carga al abrir</span>
+        </div>
+        <fieldset class="ab-switch" aria-label="Versión de la toma 5017">
+          <legend class="sr-only">Versión</legend>
+          <button type="button" data-version="original" aria-pressed="true">Original</button>
+          <button type="button" data-version="mejorado" aria-pressed="false">Mejorado</button>
+        </fieldset>
+        <div class="transport">
+          <button type="button" class="skip" data-action="back" aria-label="Retroceder 5 segundos">−5<span>s</span></button>
+          <button type="button" class="play" data-action="play" aria-label="Reproducir"><span aria-hidden="true">▶</span></button>
+          <button type="button" class="skip" data-action="forward" aria-label="Avanzar 5 segundos">+5<span>s</span></button>
+        </div>
+        <div class="time-row"><output data-role="current">00:00</output><span>de</span><output data-role="duration">--:--</output></div>
+        <div class="timeline-wrap">
+          <canvas data-role="waveform" height="96" aria-hidden="true"></canvas>
+          <div class="ghost" data-role="ghost" hidden><span class="sr-only">Posición equivalente aproximada</span></div>
+          <input data-role="timeline" type="range" min="0" max="1" value="0" step="0.01" aria-label="Posición en la toma 5017">
+        </div>
+        <div class="markers" data-role="markers" aria-label="Puntos musicales"></div>
+        <div class="equivalent" data-role="equivalent">
+          <p data-role="equivalent-text">La correspondencia aparecerá al elegir un punto.</p>
+          <button type="button" data-action="switch-take" disabled>Escuchar este pasaje en la otra toma</button>
+        </div>
+        <div class="load-progress" data-role="load"><span></span><small>Toca reproducir para cargar esta toma.</small></div>
+      </article>
+    </section>
+
+    <details id="notes" class="notes" hidden>
+      <summary>Notas opcionales <span id="note-count">0</span></summary>
+      <div class="notes-body">
+        <p>Se guardan únicamente en este dispositivo.</p>
+        <button id="mark-note" type="button" class="secondary">Marcar el instante actual</button>
+        <form id="note-form" hidden>
+          <p id="note-context"></p>
+          <label for="note-text">Nota breve</label>
+          <textarea id="note-text" maxlength="280" required></textarea>
+          <div class="form-actions"><button type="submit">Guardar nota</button><button id="cancel-note" type="button" class="secondary">Cancelar</button></div>
+        </form>
+        <ul id="note-list" class="note-list"></ul>
+        <div class="note-tools"><button id="copy-notes" type="button" class="secondary">Copiar resumen</button><button id="download-notes" type="button" class="secondary">Descargar TXT</button></div>
+        <p id="note-feedback" role="status"></p>
+      </div>
+    </details>
+
+    <footer>
+      <p>El audio se descifra únicamente en este dispositivo. <strong>No compartas este enlace.</strong></p>
+      <p>La correspondencia entre tomas es aproximada.</p>
+    </footer>
+  </main>
+</body>
+</html>

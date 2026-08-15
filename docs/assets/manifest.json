@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "AES-256-GCM",
+  "takes": {
+    "5016": {
+      "versions": {
+        "original": {
+          "file": "assets/IMG_5016_original.m4a.enc",
+          "iv": "g3K3XlDb1-eROqbW",
+          "mime": "audio/mp4",
+          "duration": 801.304,
+          "encryptedBytes": 17490765,
+          "integratedLufs": -17.74,
+          "matchGainDb": 0
+        },
+        "mejorado": {
+          "file": "assets/IMG_5016_mejorado.m4a.enc",
+          "iv": "4udKjkRhgGPJP1nq",
+          "mime": "audio/mp4",
+          "duration": 801.287,
+          "encryptedBytes": 25017890,
+          "integratedLufs": -15.77,
+          "matchGainDb": -1.97
+        }
+      },
+      "abOffset": {
+        "seconds": 0,
+        "correlation": 0.9324,
+        "prominence": 0.9102,
+        "reliable": true
+      }
+    },
+    "5017": {
+      "versions": {
+        "original": {
+          "file": "assets/IMG_5017_original.m4a.enc",
+          "iv": "d7iKFWny6yFAxmgY",
+          "mime": "audio/mp4",
+          "duration": 560.857,
+          "encryptedBytes": 12409157,
+          "integratedLufs": -17.89,
+          "matchGainDb": 0
+        },
+        "mejorado": {
+          "file": "assets/IMG_5017_mejorado.m4a.enc",
+          "iv": "yD75gq3Ty8bT4oFb",
+          "mime": "audio/mp4",
+          "duration": 560.837,
+          "encryptedBytes": 17563176,
+          "integratedLufs": -15.67,
+          "matchGainDb": -2.22
+        }
+      },
+      "abOffset": {
+        "seconds": 0,
+        "correlation": 0.926,
+        "prominence": 0.904,
+        "reliable": true
+      }
+    }
+  }
+}
