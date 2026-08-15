@@ -6,7 +6,7 @@
       "versions": {
         "original": {
           "file": "assets/IMG_5016_original.m4a.enc",
-          "iv": "g3K3XlDb1-eROqbW",
+          "iv": "G6_AmU-Oxfvxxah_",
           "mime": "audio/mp4",
           "duration": 801.304,
           "encryptedBytes": 17490765,
@@ -15,7 +15,7 @@
         },
         "mejorado": {
           "file": "assets/IMG_5016_mejorado.m4a.enc",
-          "iv": "4udKjkRhgGPJP1nq",
+          "iv": "AFLJ-JAlJg64G85f",
           "mime": "audio/mp4",
           "duration": 801.287,
           "encryptedBytes": 25017890,
@@ -34,7 +34,7 @@
       "versions": {
         "original": {
           "file": "assets/IMG_5017_original.m4a.enc",
-          "iv": "d7iKFWny6yFAxmgY",
+          "iv": "ifgi7-TbCbW33LTk",
           "mime": "audio/mp4",
           "duration": 560.857,
           "encryptedBytes": 12409157,
@@ -43,7 +43,7 @@
         },
         "mejorado": {
           "file": "assets/IMG_5017_mejorado.m4a.enc",
-          "iv": "yD75gq3Ty8bT4oFb",
+          "iv": "R2i0ok0oK3Of4fBu",
           "mime": "audio/mp4",
           "duration": 560.837,
           "encryptedBytes": 17563176,
